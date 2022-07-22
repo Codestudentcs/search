@@ -1,0 +1,398 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset204 PTSans-Bold;\f2\fnil\fcharset204 PTSans-Regular;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red25\green28\blue31;\red246\green247\blue249;\red146\green11\blue36;
+\red52\green52\blue52;\red16\green65\blue38;\red199\green226\blue213;}
+{\*\expandedcolortbl;;\cssrgb\c12941\c14510\c16078;\cssrgb\c97255\c97647\c98039;\cssrgb\c64706\c10980\c18824;
+\cssrgb\c26667\c26667\c26667;\cssrgb\c5882\c31765\c19608;\cssrgb\c81961\c90588\c86667;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid102\'00;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid201\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid202\'00;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid301\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat3\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid401\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\margl1440\margr1440\vieww33100\viewh16820\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+Project 0 Instructions.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b\fs64 \cf2 \expnd0\expndtw0\kerning0
+Search\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f2\b0\fs32 \cf2 1) Design a front-end for Google Search, Google Image Search, and Google Advanced Search.\
+(FBI Child Id Theme).\
+\
+2) 
+\f1\b\fs48 Background\
+
+\f2\b0\fs32 Recall from lecture that we can create an HTML form using a 
+\f3\fs28 \cb3 <form>
+\f2\fs32 \cb1  tag and can add 
+\f3\fs28 \cb3 <input>
+\f2\fs32 \cb1  tags to create input fields for that form. Later in the course, we\'92ll see how to write web applications that can accept form data as input. For this project, we\'92ll write forms that send data to an existing web server: in this case, Google\'92s.\
+(Complete)\
+\
+3) When you perform a Google search, as by typing in a query into Google\'92s homepage and clicking the \'93Google Search\'94 button, how does that query work? Let\'92s try to find out.\
+(Complete)\
+\
+4) Navigate to {\field{\*\fldinst{HYPERLINK "https://www.google.com/"}}{\fldrslt \cf4 \ul \ulc4 google.com}}, type in a query like \'93Harvard\'94 into the search field, and click the \'93Google Search\'94 button.\
+(Complete)\
+\
+5) As you probably expected, you should see Google search results for \'93Harvard.\'94 But now, take a look at the URL. It should begin with 
+\f3\fs28 \cb3 https://www.google.com/search
+\f2\fs32 \cb1 , the route on Google\'92s website that allows for searching. But following the route is a 
+\f3\fs28 \cb3 ?
+\f2\fs32 \cb1 , followed by some additional information.\
+(Complete)\
+\
+6) Those additional pieces of information in the URL are known as a query string. The query string consists of a sequence of GET parameters, where each parameter has a name and a value. Query strings are generally formatted as\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs28 \cf5 \cb3 field1=value1&field2=value2&field3=value3...\
+\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f2\fs32 \cf2 \cb1 where an 
+\f3\fs28 \cb3 =
+\f2\fs32 \cb1  separates the name of the parameter from its value, and the 
+\f3\fs28 \cb3 &
+\f2\fs32 \cb1  symbol separates parameters from one another. These parameters are a way for forms to submit information to a web server, by encoding the form data in the URL.\
+(Complete)\
+\
+7) Take a look at the URL for your Google search results page. It seems there are quite a few parameters that Google is using. Look through the URL (it may be helpful to copy/paste it into a text editor), and see if you can find any mention of \'93Harvard,\'94 our query.\
+(Complete)\
+\
+I8) f you look through the URL, you should see that one of the GET parameters in the URL is 
+\f3\fs28 \cb3 q=Harvard
+\f2\fs32 \cb1 . This suggests that the name for the parameter corresponding to a Google search is 
+\f3\fs28 \cb3 q
+\f2\fs32 \cb1  (likely short for \'93query\'94).\
+(Complete)\
+\
+9) It turns out that, while the other parameters provide useful data to Google, only the 
+\f3\fs28 \cb3 q
+\f2\fs32 \cb1  parameter is required to perform a search. You can test this for yourself by visiting 
+\f3\fs28 \cb3 https://www.google.com/search?q=Harvard
+\f2\fs32 \cb1 , deleting all the other parameters. You should see the same Google results!\
+(Complete)\
+\
+10) Using this information, we can actually re-implement a front end for Google\'92s homepage. Paste the below into an HTML file called 
+\f3\fs28 \cb3 index.html
+\f2\fs32 \cb1 , and open it in a browser. You can alternatively download the 
+\f3\fs28 \cb3 index.html
+\f2\fs32 \cb1  file directly from the \'93Getting Started\'94 section below.\
+(Complete)\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs28 \cf5 \cb3 <!DOCTYPE html>\
+<html lang="en">\
+    <head>\
+        <title>Search</title>\
+    </head>\
+    <body>\
+        <form action="https://www.google.com/search">\
+            <input type="text" name="q">\
+            <input type="submit" value="Google Search">\
+        </form>\
+    </body>\
+</html>\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f2\fs32 \cf2 \cb1 When you open this page in a browser, you should see a (very simple) HTML form. Type in a search query like \'93Harvard\'94 and click \'93Google Search\'94, and you should be taken to Google\'92s search results page!\
+(Complete)\
+11) How did that work? In this case, the 
+\f3\fs28 \cb3 action
+\f2\fs32 \cb1  attribute on the 
+\f3\fs28 \cb3 form
+\f2\fs32 \cb1  told the browser that when the form is submitted, the data should be sent to 
+\f3\fs28 \cb3 https://www.google.com/search
+\f2\fs32 \cb1 . And by adding an 
+\f3\fs28 \cb3 input
+\f2\fs32 \cb1  field to the form whose 
+\f3\fs28 \cb3 name
+\f2\fs32 \cb1  attribute was 
+\f3\fs28 \cb3 q
+\f2\fs32 \cb1 , whatever the user types into that input field is included as a GET parameter in the URL.\
+(Tested)\
+\
+12) Your task in this project is to expand on this site, creating your own front end for Google Search, as by exploring Google\'92s interface to identify what GET parameters it expects and adding the necessary HTML and CSS to your website.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b\fs48 \cf2 13) Getting Started\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 Download the distribution code from {\field{\*\fldinst{HYPERLINK "https://cdn.cs50.net/web/2020/spring/projects/0/search.zip"}}{\fldrslt \cf4 \ul \ulc4 https://cdn.cs50.net/web/2020/spring/projects/0/search.zip}} and unzip it. You can skip this step if you manually created the 
+\f3\fs28 \cb3 index.html
+\f2\fs32 \cb1  file by following the steps outlined in the \'93Background\'94 section above.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+(Complete)\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b\fs48 \cf2 14) Specification\
+
+\f2\b0\fs32 Your website must meet the following requirements.\
+15) Your website should have at least three pages: one for regular Google Search (which must be called 
+\f3\fs28 \cb3 index.html
+\f2\fs32 \cb1 ), one for Google Image Search, and one for Google Advanced Search.\
+(Complete)\
+\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b \cf2 16) On the Google Search page, there should be links in the upper-right of the page to go to Image Search or Advanced Search. \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f2\b0 \cf2 (Complete)\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b \cf2 17) On each of the other two pages, there should be a link in the upper-right to go back to Google Search.\
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f2\b0 \cf2 (Complete)
+\f1\b \
+
+\f2\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f1\b \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+18) On the Google Search page, the user should be able to type in a query, click \'93Google Search\'94, and be taken to the Google search results for that page.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)
+\f1\b \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\qc\partightenfactor0
+\ls2\ilvl1
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 		\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f1\b \cf2 		19) \expnd0\expndtw0\kerning0
+Like Google\'92s own, your search bar should be centered with rounded corners. The search button should also be centered, and should be beneath the search bar.\
+\pard\pardeftab720\sa320\partightenfactor0
+\ls2\ilvl1
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+(Complete)
+\f1\b \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f1\b \cf2 		\expnd0\expndtw0\kerning0
+20) On the Google Image Search page, the user should be able to type in a query, click a search button, and be taken to the Google Image search results for that page.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		(complete)\expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f1\b \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+21) On the Google Advanced Search page, the user should be able to provide input for the following four fields (taken from Google\'92s own {\field{\*\fldinst{HYPERLINK "https://www.google.com/advanced_search"}}{\fldrslt \cf4 \ul \ulc4 advanced search}} options)\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+(Complete)\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f1\b \cf2 		\expnd0\expndtw0\kerning0
+22) Find pages with\'85 \'93all these words:\'94\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)
+\f1\b \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f1\b \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+23) Find pages with\'85 \'93this exact word or phrase:\'94\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)
+\f1\b \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1
+\f1\b \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+24) Find pages with\'85 \'93any of these words:\'94\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)
+\f1\b \
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 25) Find pages with\'85 \'93none of these words:\'94\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)
+\f1\b \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 26) Like Google\'92s own Advanced Search page, the four options should be stacked vertically, and all of the text fields should be left aligned.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(modified)
+\f1\b \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 27) Consistent with Google\'92s own CSS, the \'93Advanced Search\'94 button should be blue with white text.\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)(redo)
+\f1\b \
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 28) When the \'93Advanced Search\'94 button is clicked, the user should be taken to the search results page for their given query.\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		(complete)\expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 29) Add an \'93I\'92m Feeling Lucky\'94 button to the main Google Search page. Consistent with Google\'92s own behavior, clicking this link should take users directly to the first Google search result for the query, bypassing the normal results page.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \kerning1\expnd0\expndtw0 		(trouble)\
+		\expnd0\expndtw0\kerning0
+\uc0\u8232 30) You may encounter a redirect notice when using the \'93I\'92m Feeling Lucky\'94 button. Not to worry! This is an expected consequence of a security feature implemented by Google.\
+\ls2\ilvl1\kerning1\expnd0\expndtw0 		(examined)(copy protect)\expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 31) The CSS you write should resemble Google\'92s own aesthetics.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		
+\f2\b0 \expnd0\expndtw0\kerning0
+(Complete)(mixed)
+\f1\b \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0 \cf2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b\fs48 \cf2 \
+32) Hints\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\fs32 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 To determine what the parameter names should be, you\'92re welcome to experiment with making Google searches, and looking at the resulting URL. It may also be helpful to open the \'93Network\'94 inspector (accessible in Google Chrome by choosing View -> Developer -> Developer Tools) to view details about requests your browser makes to Google.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1
+\f2\b0 \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\ls3\ilvl1\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+33) Any 
+\f3\fs28 \cb3 <input>
+\f2\fs32 \cb1  element (whether its 
+\f3\fs28 \cb3 type
+\f2\fs32 \cb1  is 
+\f3\fs28 \cb3 text
+\f2\fs32 \cb1 , 
+\f3\fs28 \cb3 submit
+\f2\fs32 \cb1 , 
+\f3\fs28 \cb3 number
+\f2\fs32 \cb1 , or something else entirely) can have 
+\f3\fs28 \cb3 name
+\f2\fs32 \cb1  and 
+\f3\fs28 \cb3 value
+\f2\fs32 \cb1  attributes that will become GET parameters when a form is submitted.\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 		(saved version of advanced)\expnd0\expndtw0\kerning0
+\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1
+\f1\b \cf2 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+34) You may also find it helpful to look at Google\'92s own HTML to answer these questions. In most browsers, you can control-click or right-click on a page and choose \'93View Page Source\'94 to view the page\'92s underlying HTML.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 		(complete)\
+		\expnd0\expndtw0\kerning0
+\uc0\u8232          To include an input field in a form that users cannot see or modify, you can use a {\field{\*\fldinst{HYPERLINK "https://www.w3schools.com/tags/att_input_type_hidden.asp"}}{\fldrslt \cf4 \ul \ulc4 \'93hidden\'94}} input field.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0 \cf2 \
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f1\b\fs48 \cf2 35) How to Submit\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f2\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Visit {\field{\*\fldinst{HYPERLINK "https://submit.cs50.io/invites/89679428401548238ceb022f141b9947"}}{\fldrslt \cf4 \ul \ulc4 this link}}, log in with your GitHub account, and click 
+\f1\b Authorize cs50
+\f2\b0 . Then, check the box indicating that you\'92d like to grant course staff access to your submissions, and click 
+\f1\b Join course
+\f2\b0 .\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf4 \kerning1\expnd0\expndtw0 {\listtext	2	}{\field{\*\fldinst{HYPERLINK "https://git-scm.com/downloads"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Install Git}}\cf2 \expnd0\expndtw0\kerning0
+ and, optionally, {\field{\*\fldinst{HYPERLINK "https://cs50.readthedocs.io/submit50/"}}{\fldrslt \cf4 \ul \ulc4 install 
+\f3\fs28 \cb3 submit50}}.\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf6 \cb7 When you submit your project, the contents of your 
+\f3\fs28 \cb3 web50/projects/2020/x/search
+\f2\fs32 \cb7  branch should match the file structure of the unzipped distribution code as originally received. That is to say, your files should not be nested inside of any other directories of your own creation (
+\f3\fs28 \cb3 search
+\f2\fs32 \cb7  or 
+\f3\fs28 \cb3 project0
+\f2\fs32 \cb7 , for example). Your branch should also not contain any code from any other projects, only this one. Failure to adhere to this file structure will likely result in your submission being rejected.\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 By way of example, for this project that means that if the grading staff visits 
+\f3\fs28 \cb3 https://github.com/me50/USERNAME/blob/web50/projects/2020/x/search/index.html
+\f2\fs32 \cb7  (where 
+\f3\fs28 \cb3 USERNAME
+\f2\fs32 \cb7  is your own GitHub username as provided in the form, below) your submission for 
+\f3\fs28 \cb3 index.html
+\f2\fs32 \cb7  for this project should be what appears. If it doesn\'92t, reorganize your repository as needed to match this paradigm.\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+If you\'92ve installed 
+\f3\fs28 \cb3 submit50
+\f2\fs32 \cb1 , execute 
+\f3\fs28 \cf5 \cb3 submit50 web50/projects/2020/x/search\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf5 \kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\uc0\u8232 
+\f2\fs32 \cb1 \uc0\u8232 \cf2 \uc0\u8232 Otherwise, using Git, push your work to 
+\f3\fs28 \cb3 https://github.com/me50/USERNAME.git
+\f2\fs32 \cb1 , where 
+\f3\fs28 \cb3 USERNAME
+\f2\fs32 \cb1  is your GitHub username, on a branch called 
+\f3\fs28 \cb3 web50/projects/2020/x/search
+\f2\fs32 \cb1 .\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf4 \kerning1\expnd0\expndtw0 {\listtext	5	}{\field{\*\fldinst{HYPERLINK "https://www.howtogeek.com/205742/how-to-record-your-windows-mac-linux-android-or-ios-screen/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul Record a screencast}}\cf2 \expnd0\expndtw0\kerning0
+ not to exceed 5 minutes in length, in which you demonstrate your project\'92s functionality. 
+\f1\b Your URL bar must remain visible throughout your demonstration of the project.
+\f2\b0  Be certain that every element of the specification, above, is demonstrated in your video. There\'92s no need to show your code in this video, just your application in action; we\'92ll review your code on GitHub. {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/upload"}}{\fldrslt \cf4 \ul \ulc4 Upload that video to YouTube}} (as unlisted or public, but not private) or somewhere else. In your video\'92s description, you must timestamp where your video demonstrates each of the seven (7) elements of the specification. 
+\f1\b This is not optional
+\f2\b0 , videos without timestamps in their description will be automatically rejected.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	6	}\expnd0\expndtw0\kerning0
+Submit {\field{\*\fldinst{HYPERLINK "https://forms.cs50.io/14d187c1-599e-43cd-8837-8d375a515993"}}{\fldrslt \cf4 \ul \ulc4 this form}}.\
+\pard\pardeftab720\partightenfactor0
+\cf2 You can then go to {\field{\*\fldinst{HYPERLINK "https://cs50.me/cs50w"}}{\fldrslt \cf4 \ul \ulc4 https://cs50.me/cs50w}} to view your current progress!\
+\
+\
+\
+}
